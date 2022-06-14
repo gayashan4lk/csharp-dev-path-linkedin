@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LinkedIn.Essentials;
 
-public  class AbstractClassesDriver
+public static class AbstractClassesDriver
 {
-    public void Drive()
+    public static void Drive()
     {
-        EmployeeAbs sw = new ShiftWorker
+        ShiftWorker sw = new ShiftWorker
         {
             FirstName = "staff",
             LastName = "one",
@@ -18,27 +18,21 @@ public  class AbstractClassesDriver
             ShiftStartTime = new TimeOnly(8, 30)
         };
 
-
-        Console.WriteLine("=============Shift Worker=============");
+        Console.WriteLine("\n=============Shift Worker=============");
         bool payrollProcessed = sw.ProcessPayroll();
         sw.Terminate(DateTime.Now);
         bool active = sw.IsActive();
-        Console.WriteLine();
 
+        EmployeeAbs mgr = new ManagerAbs
+        {
+            FirstName = "manager",
+            LastName = "one",
+            NumberOfDirectReports = 7
+        };
 
-        //Employee mgr = new Manager
-        //{
-        //    FirstName = "manager",
-        //    LastName = "one",
-        //    NumberOfDirectReports = 7
-        //};
-
-        //Console.WriteLine("=============Manager=============");
-        //bool mgrPayrollProcessed = mgr.ProcessPayroll();
-        //mgr.Terminate(DateTime.Now);
-        //bool mgrActive = mgr.IsActive();
+        Console.WriteLine("\n=============Manager=============");
+        bool mgrPayrollProcessed = mgr.ProcessPayroll();
+        mgr.Terminate(DateTime.Now);
+        bool mgrActive = mgr.IsActive();
     }
 }
-
-
-

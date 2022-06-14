@@ -10,3 +10,5 @@ CloningObjectsDriver.Records();
 ComparingEqualityDriver.Classes();
 ComparingEqualityDriver.Structs();
 ComparingEqualityDriver.Records();
+
+AbstractClassesDriver.Drive();
