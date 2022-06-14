@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32228.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedIn.Essentials", "LinkedIn.Essentials.csproj", "{19A09DE7-A0BC-4C23-8EFB-918467DBC77F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19A09DE7-A0BC-4C23-8EFB-918467DBC77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A09DE7-A0BC-4C23-8EFB-918467DBC77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A09DE7-A0BC-4C23-8EFB-918467DBC77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A09DE7-A0BC-4C23-8EFB-918467DBC77F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DED821D6-107E-493E-BE7B-7C1661B59B8D}
+	EndGlobalSection
+EndGlobal
