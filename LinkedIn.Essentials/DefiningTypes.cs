@@ -15,11 +15,11 @@ public interface IPerson
 }
 
 // classes - reference types
-public class Empolyee : IPerson
+public class Employee : IPerson
 {
     public Employee()
     {
-
+        Id = 11111;
     }
     public Employee(string firstName, string lastName, int empId = 0)
     {
@@ -46,6 +46,11 @@ public class Manager : Employee, IPerson
 // structs - value types
 public struct Age
 {
+    public Age(DateTime dob, int years)
+    {
+        BirthDate = dob;
+        YearsOld = years;
+    }
     public DateTime BirthDate { get; set; }
     public int YearsOld { get; set; }
 }
@@ -64,6 +69,13 @@ public struct VendorContact : IPerson
 // records - reference types
 public record Customer : IPerson
 {
+    public Customer()
+    {}
+    public Customer(string firstName, string lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public int Id { get; set; }
