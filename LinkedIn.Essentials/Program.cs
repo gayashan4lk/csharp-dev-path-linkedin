@@ -1,2 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using LinkedIn.Essentials;
+
+Empolyee e = new Empolyee("Matt", "Damon", 5);
+Console.WriteLine($"Hello {e.FirstName}! You are a employee. Your Id : {e.Id}");
+
+Empolyee m = new Manager("Robert", "Criss");
+Console.WriteLine($"Hello {m.FirstName}! You are a manager. Your Id : {m.Id}");

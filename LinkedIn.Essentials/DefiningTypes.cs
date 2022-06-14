@@ -17,6 +17,12 @@ public interface IPerson
 // classes - reference types
 public class Empolyee : IPerson
 {
+    public Empolyee(string firstName, string lastName, int empId = 0)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Id = empId;
+    }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public int Id { get; set; }
@@ -29,6 +35,7 @@ public class Empolyee : IPerson
 
 public class Manager : Empolyee, IPerson
 {
+    public Manager(string firstName, string lastName) : base(firstName, lastName){}
     public int NumberOfDirectReports { get; set; }
 }
 
