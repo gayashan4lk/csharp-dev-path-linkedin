@@ -17,7 +17,11 @@ public interface IPerson
 // classes - reference types
 public class Empolyee : IPerson
 {
-    public Empolyee(string firstName, string lastName, int empId = 0)
+    public Employee()
+    {
+
+    }
+    public Employee(string firstName, string lastName, int empId = 0)
     {
         FirstName = firstName;
         LastName = lastName;
@@ -33,7 +37,7 @@ public class Empolyee : IPerson
     public TimeOnly ShiftStartTime { get; set; }
 }
 
-public class Manager : Empolyee, IPerson
+public class Manager : Employee, IPerson
 {
     public Manager(string firstName, string lastName) : base(firstName, lastName){}
     public int NumberOfDirectReports { get; set; }
