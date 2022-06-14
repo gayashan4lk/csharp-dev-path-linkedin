@@ -2,6 +2,11 @@
 using LinkedIn.Essentials;
 
 DefiningTypesDriver.Drive();
+
 CloningObjectsDriver.Classes();
 CloningObjectsDriver.Structs();
 CloningObjectsDriver.Records();
+
+ComparingEqualityDriver.Classes();
+ComparingEqualityDriver.Structs();
+ComparingEqualityDriver.Records();
