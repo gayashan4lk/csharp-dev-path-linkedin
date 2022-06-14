@@ -21,7 +21,7 @@ public class Empolyee : IPerson
     {
         FirstName = firstName;
         LastName = lastName;
-        Id = empId;
+        EmployeeId = empId;
     }
     public string FirstName { get; set; }
     public string LastName { get; set; }
