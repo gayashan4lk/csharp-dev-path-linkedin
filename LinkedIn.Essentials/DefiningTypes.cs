@@ -50,12 +50,12 @@ public class Manager : Employee, IPerson
 // structs - value types
 public struct Age
 {
-    public Age(DateTime dob, int years)
+    public Age(DateOnly dob, int years)
     {
         BirthDate = dob;
         YearsOld = years;
     }
-    public DateTime BirthDate { get; set; }
+    public DateOnly BirthDate { get; set; }
     public int YearsOld { get; set; }
 }
 
@@ -88,6 +88,8 @@ public record Customer : IPerson
 
 public record PremiereCustomer : Customer
 {
+    public PremiereCustomer()
+    {}
     public PremiereCustomer(byte level)
     {
         CustomerLevel = level;
@@ -103,4 +105,3 @@ public record struct Order
     public int OrderId { get; set; }
     public DateOnly OrderDate { get; set; }
 }
-
