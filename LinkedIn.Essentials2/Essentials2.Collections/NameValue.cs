@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedIn.Essentials2
+namespace Essentials2.Collections
 {
-    internal class Collections
+    public static class NameValue
     {
-
     }
 }

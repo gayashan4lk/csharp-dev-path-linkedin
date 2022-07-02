@@ -1,4 +1,18 @@
 ﻿using Essentials2.Collections;
+
+var dictionary = new DictionaryDemo();
+dictionary.AddElements();
+dictionary.PrintElementByKey("good person");
+dictionary.PrintElementByKey("bad person");
+dictionary.PrintAllElements();
+
+var concurrent = new ConcurrentDemo();
+concurrent.PrintAllElements();
+
+
+
+
+/*using Essentials2.Collections;
 using System.Collections;
 
 CollectionSamples.Queue();
@@ -30,7 +44,7 @@ Console.WriteLine("All items in Arraylist");
 foreach (var item in arraylist)
 {
     Console.WriteLine(item);
-}
+}*/
 
 /*using Essentials2.Generics;
 using System.Text.Json;

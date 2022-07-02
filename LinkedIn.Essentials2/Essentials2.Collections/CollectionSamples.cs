@@ -59,7 +59,6 @@ namespace Essentials2.Collections
                         LastName = "Employee", 
                         JoinedDate = new DateOnly(2021, 10, i) 
                     });
-
             }
         }
 
@@ -115,6 +114,5 @@ namespace Essentials2.Collections
                 Console.WriteLine($"{employee.FirstName} {employee.LastName}");
             }
         }
-
     }
 }
