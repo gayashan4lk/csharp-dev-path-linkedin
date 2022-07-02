@@ -1,4 +1,30 @@
-﻿using Essentials2.Generics;
+﻿using System.Collections;
+
+string[] names = new string[2];
+names[0] = "Darth";
+names[1] = "Vader";
+
+Console.WriteLine($"Names Array: {names[0]}, {names[1]}");
+
+var arraylist = new ArrayList(2);
+
+arraylist.Add("First item");
+arraylist.AddRange(names);
+arraylist.AddRange(new string[] { "Second item", "Third item", "Fourth item" });
+
+Console.WriteLine($"Arraylist size: {arraylist.Count}");
+Console.WriteLine($"Indexed item [4]: {arraylist[4]}");
+Console.WriteLine("All items in Arraylist");
+foreach (var item in arraylist)
+{
+    Console.WriteLine(item);
+}
+
+
+
+
+
+/*using Essentials2.Generics;
 using System.Text.Json;
 
 var customer1 = new Customer
@@ -84,4 +110,4 @@ static void Swap<T>(ref T first, ref T second)
     T temp = first;
     first = second;
     second = temp;
-}
+}*/
