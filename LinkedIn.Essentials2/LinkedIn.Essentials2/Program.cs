@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿using Essentials2.Collections;
+using System.Collections;
+
+CollectionSamples.Queue();
+CollectionSamples.Stack();
+GenericCollections.Stack();
+
+Console.WriteLine("\n");
+
 
 string[] names = new string[2];
 names[0] = "Darth";

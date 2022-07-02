@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Essentials2.Collections\Essentials2.Collections.csproj" />
     <ProjectReference Include="..\Essentials2.Generics\Essentials2.Generics.csproj" />
   </ItemGroup>
 
