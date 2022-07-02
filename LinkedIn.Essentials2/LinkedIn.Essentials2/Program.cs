@@ -35,9 +35,11 @@ foreach (var customer in customers)
     Console.WriteLine($"{customer.Id}: {customer.FirstName} {customer.LastName}");
 }
 
+Console.WriteLine("\n");
 
 
-/*
+// *************************************************************************************************************************
+
 string jsonPerson = @"{""Id"":0, ""FirstName"": ""Balck"", ""LastName"":""Widow"", ""Age"":50}";
 
 var jperson = JsonSerializer.Deserialize<Person>(jsonPerson);
@@ -82,4 +84,4 @@ static void Swap<T>(ref T first, ref T second)
     T temp = first;
     first = second;
     second = temp;
-}*/
+}
