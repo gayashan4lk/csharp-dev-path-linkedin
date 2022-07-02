@@ -7,6 +7,10 @@ GenericCollections.Stack();
 
 Console.WriteLine("\n");
 
+CollectionSamples.Indexing();
+CollectionSamples.Iterating();
+
+Console.WriteLine("\n");
 
 string[] names = new string[2];
 names[0] = "Darth";
@@ -27,10 +31,6 @@ foreach (var item in arraylist)
 {
     Console.WriteLine(item);
 }
-
-
-
-
 
 /*using Essentials2.Generics;
 using System.Text.Json;
