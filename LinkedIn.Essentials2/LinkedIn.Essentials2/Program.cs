@@ -1,4 +1,20 @@
 ﻿using Essentials2.Generics;
+using System.Text.Json;
+
+string jsonPerson = @"{""Id"":0, ""FirstName"": ""Balck"", ""LastName"":""Widow"", ""Age"":50}";
+
+var jperson = JsonSerializer.Deserialize<Person>(jsonPerson);
+
+Console.WriteLine($"Json Person: {jperson?.FirstName} {jperson?.LastName}");
+
+// Generic types, Both of these are the same.
+int? p = 7;
+Nullable<int> q = 1;
+
+Nullable<DateTime> myDateTime = null;
+Console.WriteLine("DateTime (HasValue): " + myDateTime.HasValue);
+Console.WriteLine("DateTime (ToString): " + myDateTime.ToString());
+Console.WriteLine("DateTime (GetValueOrDefault): " + myDateTime.GetValueOrDefault());
 
 var p1 = new Person
 {
