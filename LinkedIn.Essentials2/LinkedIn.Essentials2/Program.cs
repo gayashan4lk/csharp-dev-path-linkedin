@@ -1,23 +1,39 @@
 ﻿using Essentials2.Generics;
 using System.Text.Json;
 
-var customer = new Customer
+var customer1 = new Customer
 {
-    Id = 1,
+    Id = 8,
     FirstName = "Incredible",
     LastName = "Hulk",
     CreatedDate = DateTime.Now,
 };
 
-CustomerToPersonMapper mapper = new CustomerToPersonMapper();
-var person = mapper.Map(customer);
+var customer2 = new Customer
+{
+    Id = 5,
+    FirstName = "Spider",
+    LastName = "Man",
+    CreatedDate = DateTime.Now,
+};
 
-Console.WriteLine($"Customer Id: {customer.Id} \nCustomer Name: {customer.FirstName} {customer.LastName} \nCustomer CreateDate: {customer.CreatedDate} \n");
+CustomerToPersonMapper mapper = new CustomerToPersonMapper();
+var person = mapper.Map(customer1);
+
+Console.WriteLine($"Customer Id: {customer1.Id} \nCustomer Name: {customer1.FirstName} {customer1.LastName} \nCustomer CreateDate: {customer1.CreatedDate} \n");
 Console.WriteLine("[Customer] -> [Person]\n");
 Console.WriteLine($"Person Id: {person.Id} \nPerson Name: {person.FirstName} {person.LastName} \nPerson Age: {person.Age}\n");
 
-var person2 = customer.Map<Person>(mapper);
+var person2 = customer1.Map<Person>(mapper);
 Console.WriteLine($"Person Id: {person2.Id} \nPerson Name: {person2.FirstName} {person.LastName} \nPerson Age: {person2.Age}\n");
+
+var sorter = new Sorter<Customer>();
+var customers = new Customer[] { customer1, customer2 };
+sorter.Sort(customers);
+foreach (var customer in customers)
+{
+    Console.WriteLine($"{customer.Id}: {customer.FirstName} {customer.LastName}");
+}
 
 
 
