@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32228.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedIn.Essentials2", "LinkedIn.Essentials2.csproj", "{2AF1E43E-2624-41A7-A9B5-3AF368665CB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Generics", "..\Essentials2.Generics\Essentials2.Generics.csproj", "{FEC4D378-9432-4C85-8902-E0D65C619B5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2AF1E43E-2624-41A7-A9B5-3AF368665CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF1E43E-2624-41A7-A9B5-3AF368665CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF1E43E-2624-41A7-A9B5-3AF368665CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC4D378-9432-4C85-8902-E0D65C619B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC4D378-9432-4C85-8902-E0D65C619B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC4D378-9432-4C85-8902-E0D65C619B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC4D378-9432-4C85-8902-E0D65C619B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
