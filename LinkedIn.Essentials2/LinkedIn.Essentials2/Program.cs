@@ -13,9 +13,20 @@ var result = StringExtensions.Right("teststring", 5);
 Console.WriteLine(result);
 
 string str = "this_is_cool";
-Console.WriteLine(str.Right(5));
+Console.WriteLine(str.Right(30));
 
 Console.WriteLine("String_class_has_been_extended".Right(17));
+
+var names = new List<string> { "snape", "dumbeldore", "potter", "ron"};
+
+var shortest = names.MinBy(x => x.Length);
+Console.WriteLine($"Shortest Name: {shortest}");
+
+var orderedNames = names.OrderBy(x => x.Length);
+foreach (var name in orderedNames)
+{
+    Console.WriteLine(name);
+}
 
 
 /*// Lambda expressions as Delegates

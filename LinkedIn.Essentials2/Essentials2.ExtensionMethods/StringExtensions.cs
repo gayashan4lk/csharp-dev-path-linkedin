@@ -10,7 +10,7 @@ namespace Essentials2.ExtensionMethods
     {
         public static string Right(this string input, int numChars)
         {
-            if(String.IsNullOrEmpty(input))
+            if(String.IsNullOrEmpty(input) || (numChars > input.Length))
             {
                 return String.Empty;
             }
