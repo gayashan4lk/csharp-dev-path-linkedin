@@ -8,11 +8,22 @@ namespace Essentials2.Delegates
 {
     public class DelegatesDemo
     {
+        public event Del SomethingHappened;
+
         public delegate void Del(string input);
 
         public void PassMeWork(Del del)
         {
             del("delegates");
+        }
+
+        public void DoSomething()
+        {
+            Console.WriteLine("About to do something");
+            if (SomethingHappened != null)
+            {
+                SomethingHappened("I did something");
+            }
         }
     }
 }

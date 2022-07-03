@@ -8,6 +8,9 @@ using Essentials2.Delegates;
 
 // Delegates
 
+Console.WriteLine("Hit CTRL + C to cancel");
+Console.CancelKeyPress += onCancel;
+
 Delegate del = WriteHello;
 del.DynamicInvoke("Richard");
 
@@ -17,6 +20,20 @@ delDemo.PassMeWork(WriteHello);
 void WriteHello(string name)
 {
     Console.WriteLine($"Hello {name}");
+    //delDemo.SomethingHappened -= WriteHello;
+}
+
+delDemo.SomethingHappened += WriteHello;
+delDemo.DoSomething();
+
+for (int i = 0; i < 1000000; i++)
+{
+    Console.WriteLine("Writing" + i);
+}
+
+void onCancel(object sender, ConsoleCancelEventArgs e)
+{
+    e.Cancel = true;
 }
 
 /*// Threading
