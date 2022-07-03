@@ -63,7 +63,8 @@ namespace Essentials2.Exceptions
         {
             if (!shouldThrow.HasValue) throw new ArgumentNullException("shouldThrow");
 
-            if (shouldThrow.Value) throw new Exception("Just throwing this.");
+            // BEST Practice = do not throw System.Exceptions like this.
+            if (shouldThrow.Value) throw new InvalidOptionException("This is my custom exception.");
 
             else Console.WriteLine("No exceptions being thrown.");
         }

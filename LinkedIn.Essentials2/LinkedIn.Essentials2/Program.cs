@@ -27,8 +27,18 @@ try
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"Null EXCEPTION: {ex.Message}");
+    Console.WriteLine($"Null EXCEPTION: {ex}");
 }
+
+/*try
+{
+    exception.ThrowExceptions(true);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"JUST THROWING: {ex}");
+    //throw;
+}*/
 
 try
 {
@@ -36,8 +46,8 @@ try
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"JUST THROWING: {ex.Message}");
-    //throw;
+    Console.WriteLine($"JUST THROWING: {ex}");
+    throw new ApplicationException("app exception", ex);
 }
 
 
