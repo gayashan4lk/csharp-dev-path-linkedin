@@ -8,6 +8,7 @@ using Essentials2.Threading;
 // Threading
 var threadingDemo = new ThreadingDemo();
 threadingDemo.SimpleThread();
+Console.WriteLine("\n Async Thread");
 await threadingDemo.SimpleThreadAsync();
 
 /* // Generics

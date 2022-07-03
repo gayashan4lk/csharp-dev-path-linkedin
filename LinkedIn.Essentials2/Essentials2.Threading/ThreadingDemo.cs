@@ -18,18 +18,21 @@ namespace Essentials2.Threading
             Console.WriteLine($"Main thread id: {Thread.CurrentThread.ManagedThreadId}");
             Console.ResetColor();
 
-            await DoFileWorkAsync();
+            Task tRichard = DoFileWorkAsync("RichardData");
+            Task rErlich = DoFileWorkAsync("ErlichData");
 
             Console.WriteLine("Work happening in main thread.");
+
+            await Task.WhenAll(tRichard, rErlich);
         }
 
-        public async Task DoFileWorkAsync()
+        public async Task DoFileWorkAsync(string fileName)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"File access thread id: {Thread.CurrentThread.ManagedThreadId}");
             Console.ResetColor();
 
-            string filePath = "..\\..\\..\\Data.json";
+            string filePath = $"..\\..\\..\\{fileName}.json";
             //this could take a while
             var employeeJson = await File.ReadAllTextAsync(filePath);
 
@@ -65,7 +68,7 @@ namespace Essentials2.Threading
             Console.WriteLine($"File access thread id: {Thread.CurrentThread.ManagedThreadId}");
             Console.ResetColor();
 
-            string filePath = "..\\..\\..\\Data.json";
+            string filePath = "..\\..\\..\\RichardData.json";
             //this could take a while
             var employeeJson = File.ReadAllText(filePath);
 
