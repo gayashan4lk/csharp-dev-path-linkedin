@@ -6,6 +6,7 @@ using Essentials2.Exceptions;
 using Essentials2.Threading;
 using Essentials2.Delegates;
 using Essentials2.ExtensionMethods;
+using System.Xml.Linq;
 
 // LINQ (Language Integrated Query)
 
@@ -53,6 +54,23 @@ var sEmployees = from emp in employees
 foreach (var emp in sEmployees)
 {
     Console.WriteLine(emp.ToString());
+}
+
+Console.WriteLine("\n## Read data from XML ##");
+
+var xEmployees = XElement.Load("../../../Employees.xml");
+
+var xEmpLinq = from xemp in xEmployees.Descendants("Employee")
+               where (int)xemp.Element("Id") > 2
+               select new
+               {
+                   FirstName = xemp.Element("FirstName").Value,
+                   LastName = xemp.Element("LastName").Value,
+               };
+
+foreach (var xEmp in xEmpLinq)
+{
+    Console.WriteLine($"{xEmp.FirstName} {xEmp.LastName}");
 }
 
 /*// Extension Methods
