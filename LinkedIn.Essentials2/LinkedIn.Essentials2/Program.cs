@@ -1,4 +1,7 @@
 ﻿using Essentials2.Collections;
+using Essentials2.Exceptions;
+
+Console.WriteLine("\n### Dictionary Collections ###");
 
 var dictionary = new DictionaryDemo();
 dictionary.AddElements();
@@ -6,9 +9,15 @@ dictionary.PrintElementByKey("good person");
 dictionary.PrintElementByKey("bad person");
 dictionary.PrintAllElements();
 
+Console.WriteLine("\n### Concurrent Collections ###");
+
 var concurrent = new ConcurrentDemo();
 concurrent.PrintAllElements();
 
+Console.WriteLine("\n### Exception Handling ###");
+
+var exception = new ExceptionDemo();
+exception.BasicExceptions();
 
 
 
