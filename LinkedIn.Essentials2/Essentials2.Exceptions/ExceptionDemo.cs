@@ -16,7 +16,7 @@ namespace Essentials2.Exceptions
             // string rightPath = "..\\..\\..\\Data.json"; - Working
             string rightPath = "../../../Data.json";
 
-            string filePath = wrongPath;
+            string filePath = rightPath;
 
             System.IO.Stream fileStream = null;
 
@@ -36,6 +36,10 @@ namespace Essentials2.Exceptions
             catch (IOException ioex) 
             {
                 Console.WriteLine($"IO exception caught: {ioex.Message}");
+            }
+            catch (JsonException jsonex) when (jsonex.Message.Contains("converted", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine($"Cannot convert JSON: {jsonex.Message}");
             }
             catch (JsonException jsonex)
             {
