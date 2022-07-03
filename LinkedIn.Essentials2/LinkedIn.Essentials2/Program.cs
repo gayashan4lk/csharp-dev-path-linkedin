@@ -6,6 +6,26 @@ using Essentials2.Exceptions;
 using Essentials2.Threading;
 using Essentials2.Delegates;
 
+
+
+/*// Lambda expressions as Delegates
+
+var myDelegate = new DelegatesDemo();
+
+myDelegate.PassMeWork(
+    (s) => Console.WriteLine($"Hi, Im a lambda as a delegate : {s}"));
+
+var myGenericDelegate = new GenericDelegates();
+
+myGenericDelegate.PassMeWork(
+    (s) => Console.WriteLine($"Hi, Im a lambda as a delegate : {s}"));
+
+myGenericDelegate.PassMeLogic(
+    (s) => { 
+        Console.WriteLine(s); 
+        return s.Length; 
+    });*/
+
 /*// Lambda expressions
 
 var t = (string s) => Console.WriteLine(s);

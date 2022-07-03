@@ -14,12 +14,12 @@ namespace Essentials2.Delegates
 
         public void PassMeWork(Action<string> del)
         {
-            del("delegates");
+            del("OOOHH");
         }
 
         public void PassMeLogic(Func<string, int> worker)
         {
-            int count = worker("Hello World");
+            int count = worker("Hiiii");
             Console.WriteLine($"Function returned {count}");
         }
 

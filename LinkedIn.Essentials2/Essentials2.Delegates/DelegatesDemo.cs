@@ -14,7 +14,7 @@ namespace Essentials2.Delegates
 
         public void PassMeWork(Del del)
         {
-            del("delegates");
+            del("IM THE INPUT");
         }
 
         public void DoSomething()
