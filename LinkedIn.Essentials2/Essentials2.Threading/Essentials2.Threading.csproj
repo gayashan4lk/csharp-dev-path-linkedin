@@ -1,17 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Essentials2.Collections\Essentials2.Collections.csproj" />
     <ProjectReference Include="..\Essentials2.Exceptions\Essentials2.Exceptions.csproj" />
     <ProjectReference Include="..\Essentials2.Generics\Essentials2.Generics.csproj" />
-    <ProjectReference Include="..\Essentials2.Threading\Essentials2.Threading.csproj" />
   </ItemGroup>
 
 </Project>

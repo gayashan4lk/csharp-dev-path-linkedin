@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32228.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedIn.Essentials2", "LinkedIn.Essentials2.csproj", "{2AF1E43E-2624-41A7-A9B5-3AF368665CB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedIn.Essentials2", "LinkedIn.Essentials2.csproj", "{2AF1E43E-2624-41A7-A9B5-3AF368665CB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Generics", "..\Essentials2.Generics\Essentials2.Generics.csproj", "{FEC4D378-9432-4C85-8902-E0D65C619B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essentials2.Generics", "..\Essentials2.Generics\Essentials2.Generics.csproj", "{FEC4D378-9432-4C85-8902-E0D65C619B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Collections", "..\Essentials2.Collections\Essentials2.Collections.csproj", "{059DEEB7-2DB2-4496-B8FA-8C74EF0E6DBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essentials2.Collections", "..\Essentials2.Collections\Essentials2.Collections.csproj", "{059DEEB7-2DB2-4496-B8FA-8C74EF0E6DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Exceptions", "..\Essentials2.Exceptions\Essentials2.Exceptions.csproj", "{15F52298-F69D-4DF5-A364-9F5FBD69A05B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essentials2.Exceptions", "..\Essentials2.Exceptions\Essentials2.Exceptions.csproj", "{15F52298-F69D-4DF5-A364-9F5FBD69A05B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Threading", "..\Essentials2.Threading\Essentials2.Threading.csproj", "{49081361-B717-41B5-9FB1-E7F985492657}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{15F52298-F69D-4DF5-A364-9F5FBD69A05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15F52298-F69D-4DF5-A364-9F5FBD69A05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15F52298-F69D-4DF5-A364-9F5FBD69A05B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49081361-B717-41B5-9FB1-E7F985492657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49081361-B717-41B5-9FB1-E7F985492657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49081361-B717-41B5-9FB1-E7F985492657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49081361-B717-41B5-9FB1-E7F985492657}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

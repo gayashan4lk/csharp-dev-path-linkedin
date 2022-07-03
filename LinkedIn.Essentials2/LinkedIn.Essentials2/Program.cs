@@ -1,94 +1,16 @@
-﻿using Essentials2.Collections;
-using Essentials2.Exceptions;
-
-Console.WriteLine("\n### Dictionary Collections ###");
-
-var dictionary = new DictionaryDemo();
-dictionary.AddElements();
-dictionary.PrintElementByKey("good person");
-dictionary.PrintElementByKey("bad person");
-dictionary.PrintAllElements();
-
-Console.WriteLine("\n### Concurrent Collections ###");
-
-var concurrent = new ConcurrentDemo();
-concurrent.PrintAllElements();
-
-Console.WriteLine("\n### Exception Handling ###");
-
-var exception = new ExceptionDemo();
-exception.BasicExceptions();
-//exception.ThrowExceptions(null);
-//exception.ThrowExceptions(true);
-
-try
-{
-    exception.ThrowExceptions(null);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Null EXCEPTION: {ex}");
-}
-
-/*try
-{
-    exception.ThrowExceptions(true);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"JUST THROWING: {ex}");
-    //throw;
-}*/
-
-try
-{
-    exception.ThrowExceptions(true);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"JUST THROWING: {ex}");
-    throw new ApplicationException("app exception", ex);
-}
-
-
-
-/*using Essentials2.Collections;
-using System.Collections;
-
-CollectionSamples.Queue();
-CollectionSamples.Stack();
-GenericCollections.Stack();
-
-Console.WriteLine("\n");
-
-CollectionSamples.Indexing();
-CollectionSamples.Iterating();
-
-Console.WriteLine("\n");
-
-string[] names = new string[2];
-names[0] = "Darth";
-names[1] = "Vader";
-
-Console.WriteLine($"Names Array: {names[0]}, {names[1]}");
-
-var arraylist = new ArrayList(2);
-
-arraylist.Add("First item");
-arraylist.AddRange(names);
-arraylist.AddRange(new string[] { "Second item", "Third item", "Fourth item" });
-
-Console.WriteLine($"Arraylist size: {arraylist.Count}");
-Console.WriteLine($"Indexed item [4]: {arraylist[4]}");
-Console.WriteLine("All items in Arraylist");
-foreach (var item in arraylist)
-{
-    Console.WriteLine(item);
-}*/
-
-/*using Essentials2.Generics;
+﻿using System.Collections;
 using System.Text.Json;
+using Essentials2.Generics;
+using Essentials2.Collections;
+using Essentials2.Exceptions;
+using Essentials2.Threading;
 
+// Threading
+var threadingDemo = new ThreadingDemo();
+threadingDemo.SimpleThread();
+await threadingDemo.SimpleThreadAsync();
+
+/* // Generics
 var customer1 = new Customer
 {
     Id = 8,
@@ -172,4 +94,86 @@ static void Swap<T>(ref T first, ref T second)
     T temp = first;
     first = second;
     second = temp;
+}*/
+
+/* // Collections
+ 
+CollectionSamples.Queue();
+CollectionSamples.Stack();
+GenericCollections.Stack();
+
+Console.WriteLine("\n");
+
+CollectionSamples.Indexing();
+CollectionSamples.Iterating();
+
+Console.WriteLine("\n");
+
+string[] names = new string[2];
+names[0] = "Darth";
+names[1] = "Vader";
+Console.WriteLine($"Names Array: {names[0]}, {names[1]}");
+
+var arraylist = new ArrayList(2);
+
+arraylist.Add("First item");
+arraylist.AddRange(names);
+arraylist.AddRange(new string[] { "Second item", "Third item", "Fourth item" });
+
+Console.WriteLine($"Arraylist size: {arraylist.Count}");
+Console.WriteLine($"Indexed item [4]: {arraylist[4]}");
+Console.WriteLine("All items in Arraylist");
+foreach (var item in arraylist)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine("\n### Dictionary Collections ###");
+
+var dictionary = new DictionaryDemo();
+dictionary.AddElements();
+dictionary.PrintElementByKey("good person");
+dictionary.PrintElementByKey("bad person");
+dictionary.PrintAllElements();
+
+Console.WriteLine("\n### Concurrent Collections ###");
+
+var concurrent = new ConcurrentDemo();
+concurrent.PrintAllElements();*/
+
+/*// Exception Handling
+Console.WriteLine("\n### Exception Handling ###");
+
+var exception = new ExceptionDemo();
+exception.BasicExceptions();
+//exception.ThrowExceptions(null);
+//exception.ThrowExceptions(true);
+
+try
+{
+    exception.ThrowExceptions(null);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Null EXCEPTION: {ex}");
+}
+
+try
+{
+    exception.ThrowExceptions(true);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"JUST THROWING: {ex}");
+    //throw;
+}
+
+try
+{
+    exception.ThrowExceptions(true);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"JUST THROWING: {ex}");
+    throw new ApplicationException("app exception", ex);
 }*/
