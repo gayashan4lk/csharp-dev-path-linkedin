@@ -26,14 +26,27 @@ void WriteHello(string name)
 delDemo.SomethingHappened += WriteHello;
 delDemo.DoSomething();
 
-for (int i = 0; i < 1000000; i++)
+/*for (int i = 0; i < 1000000; i++)
 {
     Console.WriteLine("Writing" + i);
 }
-
+*/
 void onCancel(object sender, ConsoleCancelEventArgs e)
 {
     e.Cancel = true;
+}
+
+Console.WriteLine("\n## Generic Delegates ##");
+
+var gdelDemo = new GenericDelegates();
+
+gdelDemo.PassMeWork(WriteHello);
+
+gdelDemo.PassMeLogic(CaculateLength);
+
+int CaculateLength(string input)
+{
+    return input.Length;
 }
 
 /*// Threading
