@@ -4,12 +4,26 @@ using Essentials2.Generics;
 using Essentials2.Collections;
 using Essentials2.Exceptions;
 using Essentials2.Threading;
+using Essentials2.Delegates;
 
-// Threading
+// Delegates
+
+Delegate del = WriteHello;
+del.DynamicInvoke("Richard");
+
+var delDemo = new DelegatesDemo();
+delDemo.PassMeWork(WriteHello);
+
+void WriteHello(string name)
+{
+    Console.WriteLine($"Hello {name}");
+}
+
+/*// Threading
 var threadingDemo = new ThreadingDemo();
-//threadingDemo.SimpleThread();
+threadingDemo.SimpleThread();
 Console.WriteLine("\n Async Thread");
-await threadingDemo.SimpleThreadAsync();
+await threadingDemo.SimpleThreadAsync();*/
 
 /* // Generics
 var customer1 = new Customer

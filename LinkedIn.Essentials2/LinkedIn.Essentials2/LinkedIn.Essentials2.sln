@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essentials2.Collections", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essentials2.Exceptions", "..\Essentials2.Exceptions\Essentials2.Exceptions.csproj", "{15F52298-F69D-4DF5-A364-9F5FBD69A05B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Threading", "..\Essentials2.Threading\Essentials2.Threading.csproj", "{49081361-B717-41B5-9FB1-E7F985492657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essentials2.Threading", "..\Essentials2.Threading\Essentials2.Threading.csproj", "{49081361-B717-41B5-9FB1-E7F985492657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Delegates", "..\Essentials2.Delegates\Essentials2.Delegates.csproj", "{BE332767-68AC-47B3-A2AD-F602F16DA4BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{49081361-B717-41B5-9FB1-E7F985492657}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49081361-B717-41B5-9FB1-E7F985492657}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49081361-B717-41B5-9FB1-E7F985492657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE332767-68AC-47B3-A2AD-F602F16DA4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE332767-68AC-47B3-A2AD-F602F16DA4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE332767-68AC-47B3-A2AD-F602F16DA4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE332767-68AC-47B3-A2AD-F602F16DA4BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
