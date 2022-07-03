@@ -7,7 +7,34 @@ using Essentials2.Threading;
 using Essentials2.Delegates;
 using Essentials2.ExtensionMethods;
 
-// Extension Methods
+// LINQ (Language Integrated Query)
+
+var employees = new List<Employee>
+{
+    new Employee{FirstName = "Matt", LastName = "Manager", Id=1},
+    new Employee{FirstName = "Felicia", LastName="FinanceDirector", Id=2},
+    new Employee{FirstName = "Pinal", LastName="PropertyManagement", Id=3},
+    new Employee{FirstName = "Amanda", LastName = "Accounting", Id=4},
+    new Employee{FirstName = "Xi", LastName="CXO", Id=5}
+};
+
+// getting an Employee type IEnumerable
+var filteredEmployees = employees.Where(e => e.Id > 2).OrderBy(e => e.FirstName.Length);
+foreach (var emp in filteredEmployees)
+{
+    Console.WriteLine(emp.Id);
+    Console.WriteLine(emp.ToString());
+}
+
+// getting an Anonymous typed IEnumerable
+var selectedEmployees = employees.Where(e => e.Id > 2).Select(es => new {FirstName = es.FirstName, LastName = es.LastName});
+foreach (var emp in selectedEmployees)
+{
+    //Console.WriteLine(emp.Id);
+    Console.WriteLine(emp.ToString());
+}
+
+/*// Extension Methods
 
 var result = StringExtensions.Right("teststring", 5);
 Console.WriteLine(result);
@@ -26,8 +53,7 @@ var orderedNames = names.OrderBy(x => x.Length);
 foreach (var name in orderedNames)
 {
     Console.WriteLine(name);
-}
-
+}*/
 
 /*// Lambda expressions as Delegates
 
