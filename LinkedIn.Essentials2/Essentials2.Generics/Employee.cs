@@ -8,7 +8,7 @@ namespace Essentials2.Generics
 {
     public class Employee
     {
-        public Employee(string Fname) => FirstName = Fname;
+        //public Employee(string Fname) => FirstName = Fname;
 
         private string f_name;
         public int Id { get; set; }

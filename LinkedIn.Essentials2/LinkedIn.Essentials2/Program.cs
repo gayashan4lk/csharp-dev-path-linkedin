@@ -5,7 +5,17 @@ using Essentials2.Collections;
 using Essentials2.Exceptions;
 using Essentials2.Threading;
 using Essentials2.Delegates;
+using Essentials2.ExtensionMethods;
 
+// Extension Methods
+
+var result = StringExtensions.Right("teststring", 5);
+Console.WriteLine(result);
+
+string str = "this_is_cool";
+Console.WriteLine(str.Right(5));
+
+Console.WriteLine("String_class_has_been_extended".Right(17));
 
 
 /*// Lambda expressions as Delegates

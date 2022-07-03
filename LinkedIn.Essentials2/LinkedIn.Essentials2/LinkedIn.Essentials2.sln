@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essentials2.Threading", "..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.Delegates", "..\Essentials2.Delegates\Essentials2.Delegates.csproj", "{BE332767-68AC-47B3-A2AD-F602F16DA4BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials2.ExtensionMethods", "..\Essentials2.ExtensionMethods\Essentials2.ExtensionMethods.csproj", "{D0EB0870-A1C8-4086-A080-197DF5AD340E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{BE332767-68AC-47B3-A2AD-F602F16DA4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE332767-68AC-47B3-A2AD-F602F16DA4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE332767-68AC-47B3-A2AD-F602F16DA4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EB0870-A1C8-4086-A080-197DF5AD340E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EB0870-A1C8-4086-A080-197DF5AD340E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EB0870-A1C8-4086-A080-197DF5AD340E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EB0870-A1C8-4086-A080-197DF5AD340E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
