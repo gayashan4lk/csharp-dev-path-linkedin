@@ -8,7 +8,7 @@ using Essentials2.Delegates;
 using Essentials2.ExtensionMethods;
 using System.Xml.Linq;
 
-// LINQ (Language Integrated Query)
+/*// LINQ (Language Integrated Query)
 
 var employees = new List<Employee>
 {
@@ -71,7 +71,7 @@ var xEmpLinq = from xemp in xEmployees.Descendants("Employee")
 foreach (var xEmp in xEmpLinq)
 {
     Console.WriteLine($"{xEmp.FirstName} {xEmp.LastName}");
-}
+}*/
 
 /*// Extension Methods
 
@@ -309,7 +309,8 @@ Console.WriteLine("\n### Concurrent Collections ###");
 var concurrent = new ConcurrentDemo();
 concurrent.PrintAllElements();*/
 
-/*// Exception Handling
+/* // Exception Handling
+
 Console.WriteLine("\n### Exception Handling ###");
 
 var exception = new ExceptionDemo();
