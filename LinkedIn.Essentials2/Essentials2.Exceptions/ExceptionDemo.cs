@@ -16,7 +16,7 @@ namespace Essentials2.Exceptions
             // string rightPath = "..\\..\\..\\Data.json"; - Working
             string rightPath = "../../../Data.json";
 
-            string filePath = rightPath;
+            string filePath = wrongPath;
 
             System.IO.Stream fileStream = null;
 
@@ -29,10 +29,23 @@ namespace Essentials2.Exceptions
 
                 Console.WriteLine($"Worker read from file: {data.Id}, {data.FirstName} {data.LastName}");
             }
+            catch (FileNotFoundException filenotfoundex)
+            {
+                Console.WriteLine($"FileNotFound : {filenotfoundex.Message}");
+            }
+            catch (IOException ioex) 
+            {
+                Console.WriteLine($"IO exception caught: {ioex.Message}");
+            }
+            catch (JsonException jsonex)
+            {
+                Console.WriteLine($"Json exception caught: {jsonex.Message}");
+            }
             catch (Exception ex)
             {
                 Console.WriteLine($"Standard exception caught: {ex.Message}");
             }
+            
             finally
             {
                 if(fileStream != null)
