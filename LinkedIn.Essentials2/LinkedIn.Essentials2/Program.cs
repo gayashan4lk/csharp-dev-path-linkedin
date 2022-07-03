@@ -7,7 +7,7 @@ using Essentials2.Threading;
 
 // Threading
 var threadingDemo = new ThreadingDemo();
-threadingDemo.SimpleThread();
+//threadingDemo.SimpleThread();
 Console.WriteLine("\n Async Thread");
 await threadingDemo.SimpleThreadAsync();
 

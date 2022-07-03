@@ -18,12 +18,22 @@ namespace Essentials2.Threading
             Console.WriteLine($"Main thread id: {Thread.CurrentThread.ManagedThreadId}");
             Console.ResetColor();
 
-            Task tRichard = DoFileWorkAsync("RichardData");
-            Task rErlich = DoFileWorkAsync("ErlichData");
+            try
+            {
+                Task tRichard = DoFileWorkAsync("RichardData");
+                Task rErlich = DoFileWorkAsync("ErlichData");
 
-            Console.WriteLine("Work happening in main thread.");
+                Console.WriteLine("Work happening in main thread.");
 
-            await Task.WhenAll(tRichard, rErlich);
+                await Task.WhenAll(tRichard, rErlich);
+            }
+            catch (AggregateException ex)
+            {
+                //ex.Handle((inner) => inner is JsonException);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(ex.Message);
+                Console.ResetColor();
+            }
         }
 
         public async Task DoFileWorkAsync(string fileName)
