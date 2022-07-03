@@ -58,5 +58,14 @@ namespace Essentials2.Exceptions
                 }
             }
         }
+
+        public void ThrowExceptions(bool? shouldThrow)
+        {
+            if (!shouldThrow.HasValue) throw new ArgumentNullException("shouldThrow");
+
+            if (shouldThrow.Value) throw new Exception("Just throwing this.");
+
+            else Console.WriteLine("No exceptions being thrown.");
+        }
     }
 }

@@ -18,6 +18,27 @@ Console.WriteLine("\n### Exception Handling ###");
 
 var exception = new ExceptionDemo();
 exception.BasicExceptions();
+//exception.ThrowExceptions(null);
+//exception.ThrowExceptions(true);
+
+try
+{
+    exception.ThrowExceptions(null);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Null EXCEPTION: {ex.Message}");
+}
+
+try
+{
+    exception.ThrowExceptions(true);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"JUST THROWING: {ex.Message}");
+    //throw;
+}
 
 
 
