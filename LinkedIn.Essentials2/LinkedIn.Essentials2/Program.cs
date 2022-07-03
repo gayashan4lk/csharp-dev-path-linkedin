@@ -6,7 +6,24 @@ using Essentials2.Exceptions;
 using Essentials2.Threading;
 using Essentials2.Delegates;
 
-// Delegates
+/*// Lambda expressions
+
+var t = (string s) => Console.WriteLine(s);
+t("Hi, I'm a lambda expression");
+
+var t2 = (string s) => s.Length;
+Console.WriteLine($"Length of 'hello' : {t2("hello")}");
+
+var c = (string s) =>
+{
+    Console.WriteLine(s);
+    return s.Length;
+};
+
+var len = c("Richard");
+Console.WriteLine(len);*/
+
+/*// Delegates
 
 Console.WriteLine("Hit CTRL + C to cancel");
 Console.CancelKeyPress += onCancel;
@@ -26,11 +43,11 @@ void WriteHello(string name)
 delDemo.SomethingHappened += WriteHello;
 delDemo.DoSomething();
 
-/*for (int i = 0; i < 1000000; i++)
-{
-    Console.WriteLine("Writing" + i);
-}
-*/
+//for (int i = 0; i < 1000000; i++)
+//{
+//    Console.WriteLine("Writing" + i);
+//}
+
 void onCancel(object sender, ConsoleCancelEventArgs e)
 {
     e.Cancel = true;
@@ -47,7 +64,7 @@ gdelDemo.PassMeLogic(CaculateLength);
 int CaculateLength(string input)
 {
     return input.Length;
-}
+}*/
 
 /*// Threading
 var threadingDemo = new ThreadingDemo();
