@@ -19,10 +19,10 @@ var employees = new List<Employee>
 };
 
 // getting an Employee type IEnumerable
-var filteredEmployees = employees.Where(e => e.Id > 2).OrderBy(e => e.FirstName.Length);
+var filteredEmployees = employees.Where(e => e.Id > 2).OrderByDescending(e => e.FirstName.Length);
 foreach (var emp in filteredEmployees)
 {
-    Console.WriteLine(emp.Id);
+    // Console.WriteLine(emp.Id);
     Console.WriteLine(emp.ToString());
 }
 
@@ -31,6 +31,27 @@ var selectedEmployees = employees.Where(e => e.Id > 2).Select(es => new {FirstNa
 foreach (var emp in selectedEmployees)
 {
     //Console.WriteLine(emp.Id);
+    Console.WriteLine(emp.ToString());
+}
+
+Console.WriteLine("\n## samething using LINQ ##");
+
+var fEmployees = from emp in employees
+                 where emp.Id > 2
+                 orderby emp.FirstName.Length
+                 descending
+                 select emp;
+
+foreach (var emp in fEmployees)
+{
+    Console.WriteLine(emp.ToString());
+}
+
+var sEmployees = from emp in employees
+                 where emp.Id > 2
+                 select new {FirstName = emp.FirstName, LastName = emp.LastName};
+foreach (var emp in sEmployees)
+{
     Console.WriteLine(emp.ToString());
 }
 
